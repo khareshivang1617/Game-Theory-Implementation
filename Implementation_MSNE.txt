@@ -1,0 +1,73 @@
+Implementation:
+- I've created a 2-D utility matrix, which is basically a list. And each entry of it contains a list of two utility values corresponding to both the players.
+- Using "combinations" from "itertools", I've checked for all the supports whether there exists an MSNE or not.
+- To check and solve MSNE for particular support. I've created an LP whose purpose is not to maximize or minimize anything, its just for solving the linear equations using LP.
+- I'm just solving the equations for a particular support using the PULP library of python.
+- Reference of those equations : Theorem 7.1 on page no. 99 of the book "Y_Narahari_Game_Theory_and_Mechanism_Design".
+
+Output format : 
+Its displays for all profiles whether there exists MSNE or not.
+
+>>>for example... The input I've given has output : 
+
+#########################################OUTPUT#################################################
+
+Enter the input file name : input.txt
+No. of strategies of player 0 : 2
+No. of strategies of player 1 : 2
+
+
+Utility matrix is :
+[[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+
+
+*****************************************
+
+checking for the support : [0] X [0]
+No MSNE Exists
+
+*****************************************
+
+checking for the support : [0] X [1]
+No MSNE Exists
+
+*****************************************
+
+checking for the support : [1] X [0]
+No MSNE Exists
+
+*****************************************
+
+checking for the support : [1] X [1]
+MSNE Exists :  P1 :  z1(1) = 1.0  ; P2 :  z2(1) = 1.0
+
+*****************************************
+
+checking for the support : [0] X [0, 1]
+No MSNE Exists
+
+*****************************************
+
+checking for the support : [1] X [0, 1]
+No MSNE Exists
+
+*****************************************
+
+checking for the support : [0, 1] X [0]
+No MSNE Exists
+
+*****************************************
+
+checking for the support : [0, 1] X [1]
+No MSNE Exists
+
+*****************************************
+
+checking for the support : [0, 1] X [0, 1]
+No MSNE Exists
+
+*****************************************
+
+#########################################OUTPUT#################################################
+
+The above output shows that only for [1] X [1], MSNE Exists :  P1 :  z1(1) = 1.0  ; P2 :  z2(1) = 1.0

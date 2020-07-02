@@ -1,0 +1,64 @@
+- To implement for the n-dimensional array to store the utilities of players, I've used 'numpy' library.
+- For all cases, I've used brute force methods, permuting over each strategy vector of all the players, fetching the utility values, and comparing the things to get the SDS, WDS, all the equilibrias , maxmin and minmax.
+
+Output: 
+>>>For the particular Input I've given as follows, the output looks like..
+
+
+
+#############################OUTPUT#####################################
+
+
+No. of players : 2
+No. of strategies of player 0 : 2
+enter the strategy set of player 0 (please enter 2 strategies seperated by space): a b
+No. of strategies of player 1 : 2
+enter the strategy set of player 1 (please enter 2 strategies seperated by space): c d
+utilities at strategies ['a', 'c'] (Enter 2 values as utilities of all 2 players seperated by spaces): 1 2
+utilities at strategies ['a', 'd'] (Enter 2 values as utilities of all 2 players seperated by spaces): 0 0
+utilities at strategies ['b', 'c'] (Enter 2 values as utilities of all 2 players seperated by spaces): 0 0
+utilities at strategies ['b', 'd'] (Enter 2 values as utilities of all 2 players seperated by spaces): 2 1
+
+
+The utility matrix is :
+
+[[list([1, 2]) list([0, 0])]
+ [list([0, 0]) list([2, 1])]]
+
+
+By indices the strongly dominant strategies are : [-1, -1]
+SDS for player 0 is : Doesn't exist
+SDS for player 1 is : Doesn't exist
+
+
+No SDSE exists
+
+
+By indices the weakly dominant strategies are : [[], []]
+WDS for player 0 is : Doesn't exists
+WDS for player 1 is : Doesn't exists
+
+
+No WDSE exists
+
+
+
+PSNE : [a,c] ; utilities=[1, 2]
+PSNE : [b,d] ; utilities=[2, 1]
+
+
+
+for player 0, maxmin strategies are :  a  b
+Corr maxmin value : 0
+for player 1, maxmin strategies are :  c  d
+Corr maxmin value : 0
+
+
+
+for player 0, the minmax strategy of other players is :  s[1]=c,
+corr minmax value is : 1
+for player 1, the minmax strategy of other players is :  s[0]=b,
+corr minmax value is : 1
+
+
+#############################OUTPUT#####################################

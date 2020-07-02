@@ -1,0 +1,49 @@
+Implementation:
+-I've created a 2-D matrix containing the array utility values.
+-I've used the PULP library to solve for the LPs we make in the TPZS games
+-Reference of LP's : page no. 141 of the book "Y_Narahari_Game_Theory_and_Mechanism_Design".
+
+Output format : 
+>>>For example... The input I've given has output :
+
+ 
+#########################################OUTPUT#################################################
+
+Enter the input file name : input.txt
+2,3
+Values of the array :
+
+[[1, 2, 3], [4, 5, 6]]
+
+
+The saddle points are :
+[1,0] : 4
+
+
+Solving LPs to find MSNEs... (In case of infinite MSNEs my program will output just one!)
+MSNE prob distribution for player 1 :  0.0, 1.0 ; Expected utility : 4.0
+MSNE prob distribution for player 2 :  1.0, 0.0, 0.0 ; Expected utility : -4.0
+
+#########################################OUTPUT#################################################
+
+Here the distribution by probability are clearly shown for both player 1 and player 2 along with expected utility.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
